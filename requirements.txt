@@ -1,5 +1,7 @@
-gym>=0.17.2
-numpy>=1.18.5
-pyglet<=1.5.21,>=1.4.0
-tqdm>=4.48.2
-twine>=1.11.0
+gymnasium>=0.21.1
+numpy>=1.26.2
+pyglet>=2.0.10
+tqdm>=4.66.1
+twine>=4.0.2
+scons>=4.6.0
+wheel>=0.42.0

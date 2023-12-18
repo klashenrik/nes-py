@@ -21,6 +21,12 @@ def _get_args():
         choices=['human', 'random'],
         help='The execution mode for the emulation.',
     )
+
+    # add the argument for the seed to use in random mode
+    parser.add_argument('--seed', '-S',
+        type=int,
+        help='The seed to use for the random number generator.')
+
     # add the argument for the number of steps to take in random mode
     parser.add_argument('--steps', '-s',
         type=int,
@@ -34,13 +40,13 @@ def main():
     """The main entry point for the command line interface."""
     # get arguments from the command line
     args = _get_args()
-    # create the environment
-    env = NESEnv(args.rom)
     # play the environment with the given mode
     if args.mode == 'human':
-        play_human(env)
+        env = NESEnv(args.rom)
+        play_human(env, seed=args.seed)
     else:
-        play_random(env, args.steps)
+        env = NESEnv(args.rom, render_mode='human')
+        play_random(env, args.steps, seed=args.seed)
 
 
 # explicitly define the outward facing API of this module

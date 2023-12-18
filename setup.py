@@ -57,6 +57,9 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Topic :: Games/Entertainment',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: System :: Emulators',
@@ -69,10 +72,10 @@ setup(
     ext_modules=[LIB_NES_ENV],
     zip_safe=False,
     install_requires=[
-        'gym>=0.17.2',
-        'numpy>=1.18.5',
-        'pyglet<=1.5.21,>=1.4.0',
-        'tqdm>=4.48.2',
+        'gymnasium>=0.29.1',
+        'numpy>=1.26.2',
+        'pyglet>=2.0.10',
+        'tqdm>=4.66.1',
     ],
     entry_points={
         'console_scripts': [
