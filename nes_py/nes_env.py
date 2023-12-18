@@ -99,7 +99,7 @@ class NESEnv(gym.Env):
 
     # relevant meta-data about the environment
     metadata = {
-        'render.modes': ['rgb_array', 'human'],
+        'render_modes': ['rgb_array', 'human'],
         'render_fps': 60
     }
 
@@ -155,7 +155,7 @@ class NESEnv(gym.Env):
         self._env = _LIB.Initialize(self._rom_path)
         # setup a placeholder for a 'human' render mode viewer
         self.viewer = None
-        assert render_mode is None or render_mode in self.metadata['render.modes']
+        assert render_mode is None or render_mode in self.metadata['render_modes']
 
         if render_mode == 'human':
             if self.spec is None:
