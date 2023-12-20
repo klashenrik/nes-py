@@ -1,3 +1,5 @@
+# Forked to work with python 3.12 and Gymnasium
+
 <p align="center">
 <img
     src="https://user-images.githubusercontent.com/2184469/42918029-a8364c66-8ad1-11e8-8147-2653091ccd38.png"
